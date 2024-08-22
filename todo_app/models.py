@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 
@@ -17,7 +19,7 @@ class Choices:
 
 
 class TodoModel(models.Model):
-    id = models.UUIDField(editable=False, auto_created=True, unique=True, primary_key=True)
+    id = models.UUIDField(default=uuid.uuid4, editable=False, auto_created=True, unique=True, primary_key=True)
     task = models.CharField(max_length=252, blank=True)
     description = models.CharField(max_length=504, blank=True)
     status = models.CharField(choices=Choices.STATUS, blank=True)
