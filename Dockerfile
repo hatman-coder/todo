@@ -10,7 +10,7 @@ COPY . /code
 RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
-COPY static /srv/www/nouveau_ink/
+COPY static /srv/www/todo/
 COPY unit.json /var/lib/unit/conf.json
 
 RUN mkdir log

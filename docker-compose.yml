@@ -9,8 +9,8 @@ services:
     volumes:
       - './media:/code/media:rw'
       - '/var/log/todo/logs:/code/logs:rw'
-      - '/srv/www/todo/static:/srv/www/nouveauink/static:rwx'
-      - '/srv/www/todo/media:/srv/www/nouveauink/media:rwx'
+      - '/srv/www/todo/static:/srv/www/todo/static:rwx'
+      - '/srv/www/todo/media:/srv/www/todo/media:rwx'
 
     ports:
       - "8070:8070"
